@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "pnpm dlx playwright test",
+    "test:chrome": "pnpm dlx playwright test --project=chromium",
+    "test:debug": "pnpm dlx playwright test --debug",
+    "test:codegen": "pnpm dlx playwright codegen",
+    "test:report": "pnpm dlx playwright show-report"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.29.2"
+  }
 }
