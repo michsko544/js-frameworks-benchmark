@@ -1,0 +1,31 @@
+stages:
+  - build
+
+cache:
+  key: node_modules
+  paths:
+    - .pnpm-store
+
+build UI:
+  stage: build
+  image: node:18-alpine
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-8 --activate
+    - pnpm config set store-dir .pnpm-store
+  script:
+    - pnpm install
+    - pnpm lint
+    - pnpm build
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
+  artifacts:
+    expire_in: 1d
+    paths:
+      - ./dist
+  only:
+    - main

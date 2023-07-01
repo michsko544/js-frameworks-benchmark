@@ -6,15 +6,16 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview --port 3004"
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^4.9.4",
-    "vite": "^4.0.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
     "vite-plugin-solid": "^2.5.0"
   },
   "dependencies": {
+    "afterframe": "^1.0.2",
     "solid-js": "^1.6.6"
   }
 }

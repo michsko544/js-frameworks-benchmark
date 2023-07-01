@@ -4,16 +4,41 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "pnpm dlx playwright test",
-    "test:chrome": "pnpm dlx playwright test --project=chromium",
-    "test:debug": "pnpm dlx playwright test --debug",
-    "test:codegen": "pnpm dlx playwright codegen",
-    "test:report": "pnpm dlx playwright show-report"
+    "test": "pnpm exec playwright test",
+    "test:chrome": "pnpm exec playwright test --project=chromium",
+    "test:react-generate": "pnpm exec playwright test react-generate500.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-generate": "pnpm exec playwright test svelte-generate500.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-generate": "pnpm exec playwright test preact-generate500.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-generate": "pnpm exec playwright test solid-generate500.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:react-clear": "pnpm exec playwright test react-clear5000.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-clear": "pnpm exec playwright test svelte-clear5000.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-clear": "pnpm exec playwright test preact-clear5000.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-clear": "pnpm exec playwright test solid-clear5000.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:react-select": "pnpm exec playwright test react-select.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-select": "pnpm exec playwright test svelte-select.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-select": "pnpm exec playwright test preact-select.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-select": "pnpm exec playwright test solid-select.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:react-swap": "pnpm exec playwright test react-swap.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-swap": "pnpm exec playwright test svelte-swap.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-swap": "pnpm exec playwright test preact-swap.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-swap": "pnpm exec playwright test solid-swap.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:react-duplicate": "pnpm exec playwright test react-duplicate.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-duplicate": "pnpm exec playwright test svelte-duplicate.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-duplicate": "pnpm exec playwright test preact-duplicate.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-duplicate": "pnpm exec playwright test solid-duplicate.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:react-remove": "pnpm exec playwright test react-remove.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:svelte-remove": "pnpm exec playwright test svelte-remove.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:preact-remove": "pnpm exec playwright test preact-remove.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:solid-remove": "pnpm exec playwright test solid-remove.spec.ts --project=chromium --repeat-each=1000 --workers=1",
+    "test:debug": "pnpm exec playwright test --debug",
+    "test:codegen": "pnpm exec playwright codegen",
+    "test:report": "pnpm exec playwright show-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.29.2"
+    "@playwright/test": "^1.34.0",
+    "@types/node": "^20.2.5"
   }
 }
